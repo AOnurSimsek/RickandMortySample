@@ -28,7 +28,7 @@ extension UIViewController {
     }
     
     func removeSpinner() {
-        DispatchQueue.main.async {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             vSpinner?.removeFromSuperview()
             vSpinner = nil
         }

@@ -64,7 +64,7 @@ class RickandMortySampleTests: XCTestCase {
     }
     
     func testBoth() throws {
-        let expectation = self.expectation(description: "Fetching query for morty")
+        let expectation = self.expectation(description: "Fetching query for both")
         
         let value = CharacterQuery.Data.Character.Result(id: "1",
                                                          name: "Rick Sanchez",

@@ -13,7 +13,6 @@
 		773FCD7C2857880600A3C2AD /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773FCD7B2857880600A3C2AD /* Network.swift */; };
 		773FCD802857A9CB00A3C2AD /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773FCD7F2857A9CB00A3C2AD /* ViewModel.swift */; };
 		773FCD822857B4A000A3C2AD /* Queries.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 773FCD812857B4A000A3C2AD /* Queries.graphql */; };
-		773FCD842857B4E300A3C2AD /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 773FCD832857B4E300A3C2AD /* schema.json */; };
 		773FCD872857BF7500A3C2AD /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 773FCD862857BF7500A3C2AD /* Roboto-Bold.ttf */; };
 		773FCD892857BF7F00A3C2AD /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 773FCD882857BF7F00A3C2AD /* Roboto-Regular.ttf */; };
 		773FCD8B2857BFD000A3C2AD /* UIFontExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773FCD8A2857BFD000A3C2AD /* UIFontExtensions.swift */; };
@@ -34,8 +33,8 @@
 		7753140F285786F10007DAEF /* RickandMortySampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7753140E285786F10007DAEF /* RickandMortySampleUITestsLaunchTests.swift */; };
 		77C353DF285A3BD50025063F /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773FCD7B2857880600A3C2AD /* Network.swift */; };
 		77C353E0285A3BD90025063F /* GraphQLQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773FCD77285787B900A3C2AD /* GraphQLQuery.swift */; };
-		77C353E1285A3BDE0025063F /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 773FCD832857B4E300A3C2AD /* schema.json */; };
 		77C353E2285A3BE10025063F /* Queries.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 773FCD812857B4A000A3C2AD /* Queries.graphql */; };
+		77D4BEDF28673BA90099FAEA /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D4BEDE28673BA90099FAEA /* Observable.swift */; };
 		77F8822A285B706100AD998A /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773FCD942857CC7E00A3C2AD /* Enums.swift */; };
 		C05624BD257F9BC1CDC4D8C1 /* Pods_RickandMortySample_RickandMortySampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D7AB7CDF978DC066F0D015C /* Pods_RickandMortySample_RickandMortySampleUITests.framework */; };
 /* End PBXBuildFile section */
@@ -66,7 +65,6 @@
 		773FCD7B2857880600A3C2AD /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		773FCD7F2857A9CB00A3C2AD /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		773FCD812857B4A000A3C2AD /* Queries.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Queries.graphql; sourceTree = "<group>"; };
-		773FCD832857B4E300A3C2AD /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = schema.json; path = "../../../../Downloads/swift-apollo-client-master/Swift Apollo Client/schema.json"; sourceTree = "<group>"; };
 		773FCD862857BF7500A3C2AD /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		773FCD882857BF7F00A3C2AD /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		773FCD8A2857BFD000A3C2AD /* UIFontExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtensions.swift; sourceTree = "<group>"; };
@@ -89,6 +87,7 @@
 		77531408285786F10007DAEF /* RickandMortySampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RickandMortySampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7753140C285786F10007DAEF /* RickandMortySampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickandMortySampleUITests.swift; sourceTree = "<group>"; };
 		7753140E285786F10007DAEF /* RickandMortySampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickandMortySampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		77D4BEDE28673BA90099FAEA /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		7D7AB7CDF978DC066F0D015C /* Pods_RickandMortySample_RickandMortySampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RickandMortySample_RickandMortySampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87D8C2E916A38CC6AB250D1C /* Pods_RickandMortySampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RickandMortySampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DF717B3977AB1DE744AC84E /* Pods_RickandMortySample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RickandMortySample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,7 +128,6 @@
 			children = (
 				773FCD7B2857880600A3C2AD /* Network.swift */,
 				773FCD77285787B900A3C2AD /* GraphQLQuery.swift */,
-				773FCD832857B4E300A3C2AD /* schema.json */,
 				773FCD812857B4A000A3C2AD /* Queries.graphql */,
 			);
 			path = Network;
@@ -222,6 +220,7 @@
 				773FCD852857BF4900A3C2AD /* Fonts */,
 				773FCD76285787A800A3C2AD /* Network */,
 				773FCDA4285A26C000A3C2AD /* Protocols.swift */,
+				77D4BEDE28673BA90099FAEA /* Observable.swift */,
 				775313EB285786EF0007DAEF /* AppDelegate.swift */,
 				775313F4285786F10007DAEF /* Assets.xcassets */,
 				775313F6285786F10007DAEF /* LaunchScreen.storyboard */,
@@ -380,7 +379,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				773FCD892857BF7F00A3C2AD /* Roboto-Regular.ttf in Resources */,
-				773FCD842857B4E300A3C2AD /* schema.json in Resources */,
 				773FCD822857B4A000A3C2AD /* Queries.graphql in Resources */,
 				773FCD872857BF7500A3C2AD /* Roboto-Bold.ttf in Resources */,
 				775313F8285786F10007DAEF /* LaunchScreen.storyboard in Resources */,
@@ -393,7 +391,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				77C353E2285A3BE10025063F /* Queries.graphql in Resources */,
-				77C353E1285A3BDE0025063F /* schema.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,6 +512,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				773FCD932857CC4C00A3C2AD /* StringExtensions.swift in Sources */,
+				77D4BEDF28673BA90099FAEA /* Observable.swift in Sources */,
 				773FCD7C2857880600A3C2AD /* Network.swift in Sources */,
 				775313F0285786EF0007DAEF /* MainScreenViewController.swift in Sources */,
 				773FCDA3285A23A600A3C2AD /* UIViewControllerExtensions.swift in Sources */,

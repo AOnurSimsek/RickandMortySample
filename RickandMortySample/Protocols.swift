@@ -16,7 +16,7 @@ protocol FilterScreenDelegate {
     func characterChanged()
 }
 
-protocol CharacterViewDelegate {
+protocol CharacterViewDelegate: AnyObject {
     func viewSelected(selectedChar: CharacterNames)
 }
 

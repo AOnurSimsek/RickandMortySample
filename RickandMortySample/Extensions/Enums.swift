@@ -17,6 +17,7 @@ enum CharacterNames: CustomStringConvertible {
     case rick
     case morty
     case both
+    case summer
     
     var description : String {
         switch self {
@@ -24,6 +25,8 @@ enum CharacterNames: CustomStringConvertible {
             return "rick"
         case .morty:
             return "morty"
+        case .summer:
+            return "summer"
         case .both:
             return ""
         }

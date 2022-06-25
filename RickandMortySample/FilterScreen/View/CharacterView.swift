@@ -9,12 +9,13 @@ import UIKit
 import SnapKit
 
 class CharacterView: UIView {
-
+    
+    private lazy var mainView: UIView = UIView()
     private lazy var titleLabel: UILabel = UILabel()
     private lazy var selectedImageView: UIImageView = UIImageView()
     private lazy var button: UIButton = UIButton()
     private var character: CharacterNames?
-    private var delegate: CharacterViewDelegate?
+    private weak var delegate: CharacterViewDelegate?
     
     
     init(width: CGFloat = UIScreen.main.bounds.width - 52, height: CGFloat = 56) {
@@ -33,35 +34,43 @@ class CharacterView: UIView {
         titleLabel.font = .RobotoRegular_24
         titleLabel.textAlignment = .left
         
-        self.backgroundColor = .white
+        mainView.backgroundColor = .clear
     }
     
     func setLayout() {
+        self.addSubview(mainView)
+        mainView.snp.makeConstraints { make in
+            make.trailing.equalTo(self.snp.trailing)
+            make.leading.equalTo(self.snp.leading)
+            make.top.equalTo(self.snp.top)
+            make.bottom.equalTo(self.snp.bottom)
+            make.height.equalTo(56)
+        }
         //ImageView
-        self.addSubview(selectedImageView)
+        mainView.addSubview(selectedImageView)
         selectedImageView.snp.makeConstraints { make in
-            make.trailing.equalTo(self.snp.trailing).offset(-16)
-            make.centerY.equalTo(self.snp.centerY)
+            make.trailing.equalTo(mainView.snp.trailing).offset(-16)
+            make.centerY.equalTo(mainView.snp.centerY)
             make.width.equalTo(24)
             make.height.equalTo(24)
         }
         
         //TitleLabel
-        self.addSubview(titleLabel)
+        mainView.addSubview(titleLabel)
         titleLabel.snp.makeConstraints { make in
-            make.leading.equalTo(self.snp.leading).offset(16)
-            make.trailing.equalTo(self.snp.trailing).offset(-16)
+            make.leading.equalTo(mainView.snp.leading).offset(16)
+            make.trailing.equalTo(mainView.snp.trailing).offset(-16)
             make.height.equalTo(24)
-            make.centerY.equalTo(self.snp.centerY)
+            make.centerY.equalTo(mainView.snp.centerY)
         }
         
         //Button
-        self.addSubview(button)
+        mainView.addSubview(button)
         button.snp.makeConstraints { make in
-            make.leading.equalTo(self.snp.leading)
-            make.trailing.equalTo(self.snp.trailing)
-            make.top.equalTo(self.snp.top)
-            make.bottom.equalTo(self.snp.bottom)
+            make.leading.equalTo(mainView.snp.leading)
+            make.trailing.equalTo(mainView.snp.trailing)
+            make.top.equalTo(mainView.snp.top)
+            make.bottom.equalTo(mainView.snp.bottom)
         }
     }
     
@@ -69,10 +78,10 @@ class CharacterView: UIView {
         self.character = character
         titleLabel.text = character.description.capitalized
         delegate = _delegate
+        selectedImageView.image = MainScreenViewModel.shared.characterName.value == self.character ? UIImage(named: "selectedIcon") : UIImage(named: "unSelectedIcon")
     }
     
     func isSelected(_ value: Bool) {
-        selectedImageView.image = value ? UIImage(named: "selectedIcon") : UIImage(named: "unSelectedIcon")
     }
     
     @objc func buttonPressed() {

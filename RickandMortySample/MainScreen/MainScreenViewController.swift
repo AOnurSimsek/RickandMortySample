@@ -20,16 +20,27 @@ class MainScreenViewController: UIViewController {
         super.viewDidLoad()
         setLayout()
         setUI()
-        setViewModel()
+        binds()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        getData(isNextPage: false)
-    }
-    
-    private func setViewModel() {
-        viewModel.setDelegate(delegate: self)
+    private func binds() {
+        viewModel.characterData.bind { _ in
+            DispatchQueue.main.async {
+                self.removeSpinner()
+                self.tableView.reloadData()
+            }
+        }
+        
+        viewModel.errorState.bind { errorOccured in
+            if errorOccured {
+                self.removeSpinner()
+                self.showError()
+            }
+        }
+        
+        viewModel.characterName.bind(listener: { _ in
+            self.getData(isNextPage: false)
+        })
     }
     
     private func getData(isNextPage: Bool) {
@@ -90,7 +101,7 @@ class MainScreenViewController: UIViewController {
     @objc private func filterButtonPressed() {
         let destination = FilterViewController()
         destination.modalPresentationStyle = .overFullScreen
-        destination.delegate = self
+//        destination.delegate = self
         self.present(destination, animated: false)
     }
     
@@ -125,35 +136,17 @@ extension MainScreenViewController: UITableViewDelegate, UITableViewDataSource {
                      characterImage: viewModel.getImage(indexPath.row),
                      location: viewModel.getLocation(indexPath.row))
         
-        if indexPath.row == viewModel.getRowCount() - 1 {
-            getData(isNextPage: true)
-        }
-        
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
-}
-
-//MARK: - ViewModel Delegate
-extension MainScreenViewController: MainScreenDelegate {
-    func dataReached() {
-        removeSpinner()
-        self.tableView.reloadData()
-    }
     
-    func errorOccured() {
-        removeSpinner()
-        showError()
-    }
-}
-
-//MARK: - FilterScreenDelegate
-extension MainScreenViewController: FilterScreenDelegate {
-    func characterChanged() {
-        viewModel.getData(isNextPage: false)
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row == viewModel.getRowCount() - 1 && viewModel.getRowCount() < viewModel.getMaxCount() {
+         getData(isNextPage: true)
+        }
     }
 }
 

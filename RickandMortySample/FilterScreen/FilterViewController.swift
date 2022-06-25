@@ -8,28 +8,23 @@
 import Foundation
 import UIKit
 import SnapKit
-import SwiftUI
 
 class FilterViewController: UIViewController {
     
     private lazy var mainView: UIView = UIView()
     private lazy var titleLabel: UILabel = UILabel()
     private lazy var seperatorView: UIView = UIView()
+    private lazy var stackView: UIStackView = UIStackView()
     private lazy var firstCharacterView : CharacterView = CharacterView()
     private lazy var secondCharacterView : CharacterView = CharacterView()
-    var delegate: FilterScreenDelegate?
+    private lazy var thirdCharacterView : CharacterView = CharacterView()
     
     let viewModel = MainScreenViewModel.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setLayout()
         setUI()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        setSelected()
+        setLayout()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -55,8 +50,16 @@ class FilterViewController: UIViewController {
         
         seperatorView.backgroundColor = UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1)
         
+        stackView.backgroundColor = .clear
+        stackView.spacing = 0
+        stackView.axis = .vertical
+        stackView.alignment = .fill
+        stackView.distribution = .fillEqually
+        
         firstCharacterView.setView(character: .rick, _delegate: self)
         secondCharacterView.setView(character: .morty, _delegate: self)
+        thirdCharacterView.setView(character: .summer, _delegate: self)
+        
     }
     
     private func setLayout() {
@@ -65,7 +68,6 @@ class FilterViewController: UIViewController {
         mainView.snp.makeConstraints { make in
             make.center.equalTo(self.view.snp.center)
             make.width.equalTo(UIScreen.main.bounds.width - 52)
-            make.height.equalTo(170)
         }
         
         //Title
@@ -86,38 +88,19 @@ class FilterViewController: UIViewController {
             make.top.equalTo(titleLabel.snp.bottom).offset(8)
         }
         
-        //First CharacterView
-        self.mainView.addSubview(firstCharacterView)
-        firstCharacterView.snp.makeConstraints { make in
+        self.mainView.addSubview(stackView)
+        stackView.snp.makeConstraints { make in
             make.leading.equalTo(mainView.snp.leading)
             make.trailing.equalTo(mainView.snp.trailing)
             make.top.equalTo(seperatorView.snp.bottom)
-            make.height.equalTo(56)
+            make.bottom.equalTo(mainView.snp.bottom)
         }
         
-        //Second CharacterView
-        self.mainView.addSubview(secondCharacterView)
-        secondCharacterView.snp.makeConstraints { make in
-            make.leading.equalTo(mainView.snp.leading)
-            make.trailing.equalTo(mainView.snp.trailing)
-            make.top.equalTo(firstCharacterView.snp.bottom)
-            make.height.equalTo(56)
-        }
-    }
-    
-    func setSelected() {
-        let selecteOne = viewModel.getCharacterName()
-        switch selecteOne {
-        case .rick:
-            firstCharacterView.isSelected(true)
-            secondCharacterView.isSelected(false)
-        case .morty:
-            firstCharacterView.isSelected(false)
-            secondCharacterView.isSelected(true)
-        case .both:
-            firstCharacterView.isSelected(false)
-            secondCharacterView.isSelected(false)
-        }
+        //CharacterViews
+        self.stackView.addArrangedSubview(firstCharacterView)
+        self.stackView.addArrangedSubview(secondCharacterView)
+        self.stackView.addArrangedSubview(thirdCharacterView)
+        
     }
 }
 
@@ -127,7 +110,6 @@ extension FilterViewController: CharacterViewDelegate {
         let vmselectedChar = viewModel.getCharacterName()
         if vmselectedChar != selectedChar {
             viewModel.setCharacterName(name: selectedChar)
-            delegate?.characterChanged()
         }
         self.dismiss(animated: false)
     }
@@ -139,7 +121,6 @@ extension FilterViewController {
         let touch = touches.first
         if touch?.view != self.mainView {
             self.dismiss(animated: false, completion: nil)
-            
         }
     }
 }
