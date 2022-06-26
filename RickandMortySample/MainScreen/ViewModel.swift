@@ -12,7 +12,7 @@ class MainScreenViewModel {
     
     private var page: Int = 1
     private var maxCount: Int = 0
-    var characterName: Observable<CharacterNames> = Observable(.both)
+    let characterName: Observable<CharacterNames> = Observable(.both)
     let characterData: Observable<[CharacterQuery.Data.Character.Result]> = Observable([])
     let errorState: Observable<Bool> = Observable(false)
     

@@ -7,14 +7,6 @@
 
 import Foundation
 
-protocol MainScreenDelegate {
-    func dataReached()
-    func errorOccured()
-}
-
-protocol FilterScreenDelegate {
-    func characterChanged()
-}
 
 protocol CharacterViewDelegate: AnyObject {
     func viewSelected(selectedChar: CharacterNames)
