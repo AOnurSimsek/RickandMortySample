@@ -26,7 +26,7 @@ class MainScreenViewModel {
             deleteValues()
         }
         
-        Network.shared.apollo.fetch(query: CharacterQuery(page: page, charaterName: characterName.value)) { [weak self] result in
+        Network.shared.apollo.fetch(query: CharacterQuery(page: page, name: characterName.value.description)) { [weak self] result in
             guard let self = self
             else { return }
             
@@ -66,7 +66,7 @@ class MainScreenViewModel {
     }
     
     func getLocation(_ indexPath: Int) -> String {
-        return characterData.value[indexPath].location?["name"] ?? ""
+        return characterData.value[indexPath].location?.name ?? ""
     }
     
     func getRowCount() -> Int {

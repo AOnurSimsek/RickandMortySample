@@ -9,10 +9,8 @@
 /* Begin PBXBuildFile section */
 		1A08233A30BADAB8728AA424 /* Pods_RickandMortySample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DF717B3977AB1DE744AC84E /* Pods_RickandMortySample.framework */; };
 		4179C6C6E7D59186825C395B /* Pods_RickandMortySampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87D8C2E916A38CC6AB250D1C /* Pods_RickandMortySampleTests.framework */; };
-		773FCD78285787B900A3C2AD /* GraphQLQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773FCD77285787B900A3C2AD /* GraphQLQuery.swift */; };
 		773FCD7C2857880600A3C2AD /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773FCD7B2857880600A3C2AD /* Network.swift */; };
 		773FCD802857A9CB00A3C2AD /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773FCD7F2857A9CB00A3C2AD /* ViewModel.swift */; };
-		773FCD822857B4A000A3C2AD /* Queries.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 773FCD812857B4A000A3C2AD /* Queries.graphql */; };
 		773FCD872857BF7500A3C2AD /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 773FCD862857BF7500A3C2AD /* Roboto-Bold.ttf */; };
 		773FCD892857BF7F00A3C2AD /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 773FCD882857BF7F00A3C2AD /* Roboto-Regular.ttf */; };
 		773FCD8B2857BFD000A3C2AD /* UIFontExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773FCD8A2857BFD000A3C2AD /* UIFontExtensions.swift */; };
@@ -32,8 +30,9 @@
 		7753140D285786F10007DAEF /* RickandMortySampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7753140C285786F10007DAEF /* RickandMortySampleUITests.swift */; };
 		7753140F285786F10007DAEF /* RickandMortySampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7753140E285786F10007DAEF /* RickandMortySampleUITestsLaunchTests.swift */; };
 		77C353DF285A3BD50025063F /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773FCD7B2857880600A3C2AD /* Network.swift */; };
-		77C353E0285A3BD90025063F /* GraphQLQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773FCD77285787B900A3C2AD /* GraphQLQuery.swift */; };
-		77C353E2285A3BE10025063F /* Queries.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 773FCD812857B4A000A3C2AD /* Queries.graphql */; };
+		77D0E788286CE17000952DAA /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 77D0E787286CE17000952DAA /* schema.json */; };
+		77D0E78A286CE17600952DAA /* Queries.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 77D0E789286CE17600952DAA /* Queries.graphql */; };
+		77D0E78C286CE1AE00952DAA /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D0E78B286CE1AE00952DAA /* API.swift */; };
 		77D4BEDF28673BA90099FAEA /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D4BEDE28673BA90099FAEA /* Observable.swift */; };
 		77F8822A285B706100AD998A /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773FCD942857CC7E00A3C2AD /* Enums.swift */; };
 		C05624BD257F9BC1CDC4D8C1 /* Pods_RickandMortySample_RickandMortySampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D7AB7CDF978DC066F0D015C /* Pods_RickandMortySample_RickandMortySampleUITests.framework */; };
@@ -61,10 +60,8 @@
 		2E01D176A4DD7CA9A28B6783 /* Pods-RickandMortySampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RickandMortySampleTests.release.xcconfig"; path = "Target Support Files/Pods-RickandMortySampleTests/Pods-RickandMortySampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		6160CDA6CD75291166564C52 /* Pods-RickandMortySample-RickandMortySampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RickandMortySample-RickandMortySampleUITests.debug.xcconfig"; path = "Target Support Files/Pods-RickandMortySample-RickandMortySampleUITests/Pods-RickandMortySample-RickandMortySampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6D007CE6E974EB8B84A09917 /* Pods-RickandMortySample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RickandMortySample.debug.xcconfig"; path = "Target Support Files/Pods-RickandMortySample/Pods-RickandMortySample.debug.xcconfig"; sourceTree = "<group>"; };
-		773FCD77285787B900A3C2AD /* GraphQLQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLQuery.swift; sourceTree = "<group>"; };
 		773FCD7B2857880600A3C2AD /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		773FCD7F2857A9CB00A3C2AD /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
-		773FCD812857B4A000A3C2AD /* Queries.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Queries.graphql; sourceTree = "<group>"; };
 		773FCD862857BF7500A3C2AD /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		773FCD882857BF7F00A3C2AD /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		773FCD8A2857BFD000A3C2AD /* UIFontExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtensions.swift; sourceTree = "<group>"; };
@@ -87,6 +84,9 @@
 		77531408285786F10007DAEF /* RickandMortySampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RickandMortySampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7753140C285786F10007DAEF /* RickandMortySampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickandMortySampleUITests.swift; sourceTree = "<group>"; };
 		7753140E285786F10007DAEF /* RickandMortySampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickandMortySampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		77D0E787286CE17000952DAA /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
+		77D0E789286CE17600952DAA /* Queries.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Queries.graphql; sourceTree = "<group>"; };
+		77D0E78B286CE1AE00952DAA /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = API.swift; path = RickandMortySample/API.swift; sourceTree = SOURCE_ROOT; };
 		77D4BEDE28673BA90099FAEA /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		7D7AB7CDF978DC066F0D015C /* Pods_RickandMortySample_RickandMortySampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RickandMortySample_RickandMortySampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87D8C2E916A38CC6AB250D1C /* Pods_RickandMortySampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RickandMortySampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,9 +126,9 @@
 		773FCD76285787A800A3C2AD /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				77D0E78B286CE1AE00952DAA /* API.swift */,
 				773FCD7B2857880600A3C2AD /* Network.swift */,
-				773FCD77285787B900A3C2AD /* GraphQLQuery.swift */,
-				773FCD812857B4A000A3C2AD /* Queries.graphql */,
+				77D0E789286CE17600952DAA /* Queries.graphql */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -214,6 +214,7 @@
 		775313EA285786EF0007DAEF /* RickandMortySample */ = {
 			isa = PBXGroup;
 			children = (
+				77D0E787286CE17000952DAA /* schema.json */,
 				773FCD8E2857C4CD00A3C2AD /* MainScreen */,
 				773FCD982858F06F00A3C2AD /* FilterScreen */,
 				773FCD8C2857BFD900A3C2AD /* Extensions */,
@@ -276,6 +277,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 77531412285786F10007DAEF /* Build configuration list for PBXNativeTarget "RickandMortySample" */;
 			buildPhases = (
+				77D0E73C286CD82500952DAA /* Generate Apollo GraphQL API */,
 				DE53F16D1FC286B2BEE891E6 /* [CP] Check Pods Manifest.lock */,
 				775313E4285786EF0007DAEF /* Sources */,
 				775313E5285786EF0007DAEF /* Frameworks */,
@@ -378,8 +380,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77D0E78A286CE17600952DAA /* Queries.graphql in Resources */,
 				773FCD892857BF7F00A3C2AD /* Roboto-Regular.ttf in Resources */,
-				773FCD822857B4A000A3C2AD /* Queries.graphql in Resources */,
+				77D0E788286CE17000952DAA /* schema.json in Resources */,
 				773FCD872857BF7500A3C2AD /* Roboto-Bold.ttf in Resources */,
 				775313F8285786F10007DAEF /* LaunchScreen.storyboard in Resources */,
 				775313F5285786F10007DAEF /* Assets.xcassets in Resources */,
@@ -390,7 +393,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77C353E2285A3BE10025063F /* Queries.graphql in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,6 +422,24 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RickandMortySample/Pods-RickandMortySample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		77D0E73C286CD82500952DAA /* Generate Apollo GraphQL API */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Generate Apollo GraphQL API";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n# Don't run this during index builds\nif [ $ACTION = \"indexbuild\" ]; then exit 0; fi\n\nSCRIPT_PATH=\"${PODS_ROOT}/Apollo/scripts\"\ncd \"${SRCROOT}/${TARGET_NAME}\"\n\"${SCRIPT_PATH}\"/run-bundled-codegen.sh codegen:generate --target=swift --includes=./**/*.graphql --localSchemaFile=\"schema.json\" API.swift\n";
 		};
 		8F97EC8A4290BE5E293418A0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -515,12 +535,12 @@
 				77D4BEDF28673BA90099FAEA /* Observable.swift in Sources */,
 				773FCD7C2857880600A3C2AD /* Network.swift in Sources */,
 				775313F0285786EF0007DAEF /* MainScreenViewController.swift in Sources */,
+				77D0E78C286CE1AE00952DAA /* API.swift in Sources */,
 				773FCDA3285A23A600A3C2AD /* UIViewControllerExtensions.swift in Sources */,
 				773FCD8B2857BFD000A3C2AD /* UIFontExtensions.swift in Sources */,
 				775313EC285786EF0007DAEF /* AppDelegate.swift in Sources */,
 				773FCD9A2858F08400A3C2AD /* FilterViewController.swift in Sources */,
 				773FCD9F2858F18E00A3C2AD /* CharacterView.swift in Sources */,
-				773FCD78285787B900A3C2AD /* GraphQLQuery.swift in Sources */,
 				773FCDA5285A26C000A3C2AD /* Protocols.swift in Sources */,
 				773FCD802857A9CB00A3C2AD /* ViewModel.swift in Sources */,
 				773FCD952857CC7E00A3C2AD /* Enums.swift in Sources */,
@@ -536,7 +556,6 @@
 				77C353DF285A3BD50025063F /* Network.swift in Sources */,
 				77531403285786F10007DAEF /* RickandMortySampleTests.swift in Sources */,
 				77F8822A285B706100AD998A /* Enums.swift in Sources */,
-				77C353E0285A3BD90025063F /* GraphQLQuery.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -717,7 +736,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -746,7 +765,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

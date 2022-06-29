@@ -1,23 +1,18 @@
-    query Character($page: Int!, $name: String!) {
-      characters(page: $page, filter: { name: $name }) {
-        __typename
-        info {
-            __typename
-            count
-        }
-        results {
-          __typename
-          id
-          name
-          origin {
-            __typename
-            name
-          }
-          location {
-            __typename
-            name
-          }
-          image
-        }
-      }
+query Character($page: Int!, $name: String!) {
+ characters(page: $page, filter: { name: $name }) {
+    info {
+      count
     }
+    results {
+      id
+      name
+      origin {
+        name
+      }
+      location {
+        name
+      }
+      image
+    }
+  }
+}
